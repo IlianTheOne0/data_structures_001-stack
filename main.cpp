@@ -1,13 +1,11 @@
-#include <iostream>
 #include <conio.h>
 
-using std::cout;
-using std::endl;
-using std::cin;
+#include "presentation.h"
 
 int main()
 {
+	Intro();
 
-	_getch();
+	char ch = _getch();
 	return 0;
 }
