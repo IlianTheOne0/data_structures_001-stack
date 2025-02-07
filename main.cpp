@@ -25,7 +25,7 @@ private:
 	}
 public:
 	Stack() : _maxSize(DEFAULT_STACK_SIZE) { _stack = new TValue[_maxSize]; }
-	Stack(const size_t& maxSize) : _maxSize(maxSize), Stack() {}
+	Stack(const size_t& maxSize) : _maxSize(maxSize) { _stack = new TValue[_maxSize]; }
 	~Stack() { delete[] _stack; }
 
 	void push(TValue element) { if (_counter == _maxSize) { _resize(); } _stack[_counter++] = element; }
