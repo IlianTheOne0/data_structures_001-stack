@@ -21,7 +21,7 @@ private:
 	}
 public:
 	Stack() : _maxSize(DEFAULT_STACK_SIZE) { _stack = new TValue[_maxSize]; }
-	Stack(const size_t& maxSize) : _maxSize(maxSize), Stack() {}
+	Stack(const size_t& maxSize) : _maxSize(maxSize) { _stack = new TValue[_maxSize]; }
 	Stack(const Stack& other)
 		: _maxSize(other._maxSize), _counter(other._counter)
 	{ _stack = new TValue[_maxSize]; for (size_t i = 0; i < _counter; i++) { _stack[i] = other._stack[i]; } }
